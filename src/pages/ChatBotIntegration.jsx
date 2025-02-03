@@ -63,7 +63,7 @@ const ChatbotIntegration = () => {
 
         <div className="text-n-3 text-sm">
           Chatbot not working as intended? 
-          <a href="/feedback" className="text-color-1 hover:underline">Share feedback</a>
+          <Link to="/feedback"><a className="text-color-1 hover:underline">Share feedback</a></Link>
         </div>
 
         <div className="flex flex-col space-y-4">
