@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Button from '../components/Button';
 import Section from '../components/Section';
 import Heading from '../components/Heading';
+import { Link } from 'react-router-dom';
 
 const ChatbotIntegration = () => {
   const [integrationMessage, setIntegrationMessage] = useState("");
@@ -47,11 +48,6 @@ const ChatbotIntegration = () => {
     window.location.href = 'mailto:developer@client.com?subject=Chatbot Integration Instructions&body=Please find the chatbot integration instructions below:...';
   };
 
-  const handleTestIntegration = () => {
-    // Open a new screen with success UI
-    window.open('/integration-success', '_blank');
-  };
-
   return (
     <Section className="py-10 lg:py-16 xl:py-20">
       <Heading
@@ -79,9 +75,9 @@ const ChatbotIntegration = () => {
             Mail Instructions to Developer
           </Button>
 
-          <Button onClick={handleTestIntegration} px="px-8">
+          <Link to="/integration-success"><Button>
             Test Integration
-          </Button>
+          </Button></Link>
         </div>
       </div>
 
